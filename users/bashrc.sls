@@ -14,7 +14,7 @@ include:
 {%- else -%}
 {%- set user_group = name -%}
 {%- endif %}
-{%- if manage sameas true -%}
+{%- if manage -%}
 users_{{ name }}_user_bashrc:
   file.managed:
     - name: {{ home }}/.bashrc
